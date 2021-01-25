@@ -25,7 +25,7 @@ class InvitationController extends Controller
         if($user->id === $degustation->owner_id || $member) {
             return response()->json([
                 'message' => 'You already belong to the degustation.'
-            ]);
+            ], 400);
         }
 
         $member = $user->memberships()->firstOrCreate([
