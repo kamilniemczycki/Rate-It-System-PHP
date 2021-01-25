@@ -32,7 +32,7 @@ class InvitationController extends Controller
             'degustation_id' => $degustation->id
         ]);
 
-        return response([
+        return response((object)[
             'message' => 'You have become a degustation member.',
             'member' => $member
         ]);
